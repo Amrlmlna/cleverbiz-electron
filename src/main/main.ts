@@ -14,13 +14,13 @@ function createWindow(): void {
     minWidth: 1024,
     minHeight: 700,
     title: 'CleverBiz',
-    icon: path.join(__dirname, '../../assets/icon.png'),
     show: false,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
       sandbox: true,
-      preload: path.join(__dirname, '../preload/preload.js'),
+      // Main process and preload both build to .vite/build/ with Forge+Vite
+      preload: path.join(__dirname, 'preload.js'),
       webSecurity: true,
       allowRunningInsecureContent: false,
     },
@@ -54,8 +54,13 @@ function createWindow(): void {
   });
 }
 
-// --- Content Security Policy ---
+// --- Content Security Policy (production only — Vite dev server handles its own CSP) ---
 function setupCSP(): void {
+  if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
+    // Dev mode: Vite sets its own CSP, don't interfere
+    return;
+  }
+
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
     callback({
       responseHeaders: {
@@ -65,7 +70,7 @@ function setupCSP(): void {
           "script-src 'self' 'unsafe-inline'",
           "style-src 'self' 'unsafe-inline'",
           "img-src 'self' data: https:",
-          "connect-src 'self' http://localhost:* https:",
+          "connect-src 'self'",
           "font-src 'self'",
           "media-src 'self'",
         ].join('; '),

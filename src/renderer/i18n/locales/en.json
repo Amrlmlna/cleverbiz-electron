@@ -27,18 +27,6 @@
     "collapse": "Collapse",
     "expand": "Expand"
   },
-  "dashboard": {
-    "title": "Dashboard",
-    "todayRevenue": "Today's Revenue",
-    "monthlyRevenue": "Monthly Revenue",
-    "transactionsToday": "Transactions Today",
-    "lowStockItems": "Low Stock Items",
-    "recentTransactions": "Recent Transactions",
-    "noTransactions": "No transactions yet. Start selling from the POS.",
-    "businessHealth": "Business Health",
-    "businessHealthDesc": "Connect to the cloud backend to see your business health score.",
-    "offlineMode": "Offline mode"
-  },
   "pos": {
     "title": "Point of Sale",
     "searchPlaceholder": "Search products by name or SKU...",
@@ -112,6 +100,28 @@
     "owner": "Owner",
     "cashier": "Cashier"
   },
+  "dashboard": {
+    "title": "Dashboard",
+    "todayRevenue": "Today's Revenue",
+    "monthlyRevenue": "Monthly Revenue",
+    "transactionsToday": "Transactions Today",
+    "lowStockItems": "Low Stock Items",
+    "recentTransactions": "Recent Transactions",
+    "noTransactions": "No transactions yet. Start selling from the POS.",
+    "businessHealth": "Business Health",
+    "businessHealthDesc": "Connect to the cloud backend to see your business health score.",
+    "offlineMode": "Offline mode",
+    "healthExcellent": "Excellent",
+    "healthFair": "Fair",
+    "healthNeedsAttention": "Needs Attention",
+    "revenueGrowth": "Revenue Growth",
+    "inventoryTurnover": "Inventory Turnover",
+    "cashFlowStability": "Cash Flow Stability",
+    "seeAll": "See All",
+    "gradeA": "Excellent",
+    "gradeB": "Fair",
+    "gradeC": "Needs Attention"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -122,6 +132,10 @@
     "delete": "Delete",
     "edit": "Edit",
     "search": "Search",
-    "filter": "Filter"
+    "filter": "Filter",
+    "date": "Date",
+    "items": "Items",
+    "amount": "Amount",
+    "status": "Status"
   }
 }

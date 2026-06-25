@@ -37,7 +37,17 @@
     "noTransactions": "Belum ada transaksi. Mulai berjualan dari POS.",
     "businessHealth": "Kesehatan Bisnis",
     "businessHealthDesc": "Hubungkan ke cloud untuk melihat skor kesehatan bisnis Anda.",
-    "offlineMode": "Mode offline"
+    "offlineMode": "Mode offline",
+    "healthExcellent": "Sangat Baik",
+    "healthFair": "Cukup",
+    "healthNeedsAttention": "Perlu Perhatian",
+    "revenueGrowth": "Pertumbuhan Pendapatan",
+    "inventoryTurnover": "Perputaran Inventaris",
+    "cashFlowStability": "Stabilitas Arus Kas",
+    "seeAll": "Lihat Semua",
+    "gradeA": "Sangat Baik",
+    "gradeB": "Cukup",
+    "gradeC": "Perlu Perhatian"
   },
   "pos": {
     "title": "Titik Penjualan",
@@ -122,6 +132,10 @@
     "delete": "Hapus",
     "edit": "Ubah",
     "search": "Cari",
-    "filter": "Filter"
+    "filter": "Filter",
+    "date": "Tanggal",
+    "items": "Item",
+    "amount": "Jumlah",
+    "status": "Status"
   }
 }

@@ -200,34 +200,53 @@
    Component Classes — driven by CSS variables
    ============================================================ */
 @layer components {
+  /* Custom easing curves (Emil Kowalski philosophy) */
+  :root {
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
   .btn-primary {
     @apply font-medium py-2 px-4 rounded transition-colors duration-150
            disabled:opacity-50 disabled:cursor-not-allowed;
     background-color: var(--color-secondary);
     color: var(--color-on-secondary);
+    transition: background-color 150ms ease, transform 160ms var(--ease-out);
   }
   .btn-primary:hover:not(:disabled) {
     background-color: var(--color-on-secondary-fixed-variant);
   }
+  .btn-primary:active:not(:disabled) {
+    transform: scale(0.97);
+  }
 
   .btn-secondary {
-    @apply font-medium py-2 px-4 rounded transition-colors duration-150;
+    @apply font-medium py-2 px-4 rounded;
     background-color: var(--color-surface-container);
     color: var(--color-on-surface);
     border: 1px solid var(--color-outline-variant);
+    transition: background-color 150ms ease, transform 160ms var(--ease-out);
   }
   .btn-secondary:hover:not(:disabled) {
     background-color: var(--color-surface-container-high);
   }
+  .btn-secondary:active:not(:disabled) {
+    transform: scale(0.97);
+  }
 
   .btn-danger {
-    @apply font-medium py-2 px-4 rounded transition-colors duration-150
+    @apply font-medium py-2 px-4 rounded
            disabled:opacity-50 disabled:cursor-not-allowed;
     background-color: var(--color-error);
     color: var(--color-on-error);
+    transition: opacity 200ms ease, transform 160ms var(--ease-out);
   }
   .btn-danger:hover:not(:disabled) {
     opacity: 0.9;
+  }
+  .btn-danger:active:not(:disabled) {
+    transform: scale(0.97);
   }
 
   .card {
@@ -317,5 +336,139 @@
   .badge-info {
     background-color: var(--color-info-container);
     color: var(--color-info);
+  }
+
+  /* Stats card tonal hover (no shadows per DESIGN.md) */
+  .stats-card {
+    transition: background-color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  }
+  .stats-card:hover {
+    background-color: var(--color-surface-container-low);
+    border-color: var(--color-outline);
+  }
+
+  /* Grade badge press feedback */
+  .grade-badge {
+    transition: transform 160ms var(--ease-out);
+  }
+  .grade-badge:active {
+    transform: scale(0.95);
+  }
+
+  /* Data table — instant hover, no animation (tens/day) */
+  .data-table tbody tr {
+    transition: none;
+  }
+
+  /* POS product tiles */
+  .product-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-outline-variant);
+    background-color: var(--color-surface-container-lowest);
+    color: var(--color-on-surface);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 150ms ease, border-color 150ms ease, transform 160ms var(--ease-out);
+    font-family: inherit;
+  }
+  .product-tile:hover:not(:disabled) {
+    background-color: var(--color-surface-container-low);
+    border-color: var(--color-tertiary);
+  }
+  .product-tile:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+  .product-tile:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  /* Cart quantity buttons */
+  .qty-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid var(--color-outline-variant);
+    background-color: var(--color-surface-container-low);
+    color: var(--color-on-surface);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    transition: background-color 125ms ease, transform 130ms var(--ease-out);
+    font-family: inherit;
+  }
+  .qty-btn:hover {
+    background-color: var(--color-surface-container-high);
+  }
+  .qty-btn:active {
+    transform: scale(0.92);
+    background-color: var(--color-surface-container);
+  }
+
+  /* Payment method options */
+  .payment-option {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-outline-variant);
+    background-color: var(--color-surface-container-lowest);
+    color: var(--color-on-surface);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 150ms ease, border-color 150ms ease, transform 160ms var(--ease-out);
+  }
+  .payment-option:hover {
+    background-color: var(--color-surface-container-low);
+    border-color: var(--color-outline);
+  }
+  .payment-option:active {
+    transform: scale(0.97);
+  }
+  .payment-option-active {
+    background-color: var(--color-tertiary-container);
+    color: var(--color-tertiary);
+    border-color: var(--color-tertiary);
+    font-weight: 600;
+  }
+  .payment-option-active:hover {
+    background-color: var(--color-tertiary-container);
+    border-color: var(--color-tertiary);
+  }
+
+  /* Cart item row */
+  .cart-item {
+    padding: 8px 4px;
+    border-radius: 0.5rem;
+    transition: background-color 150ms ease;
+  }
+  .cart-item:hover {
+    background-color: var(--color-surface-container-low);
+  }
+}
+
+/* ─── Accessibility: Reduced motion ────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .btn-primary:active:not(:disabled),
+  .btn-secondary:active:not(:disabled),
+  .btn-danger:active:not(:disabled),
+  .product-tile:active:not(:disabled),
+  .qty-btn:active,
+  .payment-option:active,
+  .grade-badge:active {
+    transform: none !important;
   }
 }
