@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   CleverBiz Design System — CSS Custom Properties
+   Based on DESIGN.md — Industrial Minimalist theme
+   ============================================================ */
+
+@layer base {
+  :root,
+  .theme-light {
+    /* Surface tones — off-white foundation */
+    --color-surface: #f7f9fe;
+    --color-surface-dim: #d8dadf;
+    --color-surface-bright: #f7f9fe;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #f2f3f9;
+    --color-surface-container: #eceef3;
+    --color-surface-container-high: #e6e8ed;
+    --color-surface-container-highest: #e0e2e7;
+
+    /* On-surface (text) */
+    --color-on-surface: #191c20;
+    --color-on-surface-variant: #444749;
+    --color-inverse-surface: #2d3135;
+    --color-inverse-on-surface: #eff1f6;
+
+    /* Outlines */
+    --color-outline: #747779;
+    --color-outline-variant: #c4c7c9;
+    --color-surface-tint: #5d5f60;
+
+    /* Primary — off-white "butter" per DESIGN.md */
+    --color-primary: #5d5f60;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #fcfcfd;
+    --color-on-primary-container: #737475;
+    --color-primary-fixed: #e2e2e3;
+    --color-primary-fixed-dim: #c6c6c7;
+    --color-on-primary-fixed: #1a1c1d;
+    --color-on-primary-fixed-variant: #454748;
+
+    /* Secondary — deep charcoal (#1A1A1E per DESIGN.md) */
+    --color-secondary: #5f5e62;
+    --color-on-secondary: #ffffff;
+    --color-secondary-container: #e4e1e7;
+    --color-on-secondary-container: #656468;
+    --color-secondary-fixed: #e4e1e7;
+    --color-secondary-fixed-dim: #c8c5cb;
+    --color-on-secondary-fixed: #1b1b1f;
+    --color-on-secondary-fixed-variant: #47464b;
+
+    /* Tertiary — slate blue (#5E769E per DESIGN.md) */
+    --color-tertiary: #475f86;
+    --color-on-tertiary: #ffffff;
+    --color-tertiary-container: #fdfbff;
+    --color-on-tertiary-container: #5d759d;
+
+    /* Error */
+    --color-error: #ba1a1a;
+    --color-on-error: #ffffff;
+    --color-error-container: #ffdad6;
+    --color-on-error-container: #93000a;
+
+    /* Background */
+    --color-background: #fcfcfd;
+    --color-on-background: #191c20;
+    --color-surface-variant: #e0e2e7;
+
+    /* Semantic status colors — muted per DESIGN.md spec */
+    --color-success: #2e7d32;
+    --color-success-container: #e8f5e9;
+    --color-warning: #b76e00;
+    --color-warning-container: #fff3e0;
+    --color-info: #1565c0;
+    --color-info-container: #e3f2fd;
+  }
+
+  /* ============================================================
+     Dark Theme — derived from light with proper contrast
+     ============================================================ */
+  .theme-dark {
+    --color-surface: #111318;
+    --color-surface-dim: #0a0b0e;
+    --color-surface-bright: #37393e;
+    --color-surface-container-lowest: #0c0e12;
+    --color-surface-container-low: #191b20;
+    --color-surface-container: #1d1f24;
+    --color-surface-container-high: #282a2f;
+    --color-surface-container-highest: #32353a;
+
+    --color-on-surface: #e0e2e7;
+    --color-on-surface-variant: #c4c6cb;
+    --color-inverse-surface: #e0e2e7;
+    --color-inverse-on-surface: #2d3135;
+
+    --color-outline: #8e9095;
+    --color-outline-variant: #44474c;
+    --color-surface-tint: #c6c6c7;
+
+    /* Primary silver/grey in dark */
+    --color-primary: #c6c6c7;
+    --color-on-primary: #2d2f30;
+    --color-primary-container: #444748;
+    --color-on-primary-container: #e2e2e3;
+    --color-primary-fixed: #e2e2e3;
+    --color-primary-fixed-dim: #c6c6c7;
+    --color-on-primary-fixed: #1a1c1d;
+    --color-on-primary-fixed-variant: #454748;
+
+    /* Secondary */
+    --color-secondary: #c8c5cb;
+    --color-on-secondary: #333036;
+    --color-secondary-container: #47464b;
+    --color-on-secondary-container: #e4e1e7;
+    --color-secondary-fixed: #e4e1e7;
+    --color-secondary-fixed-dim: #c8c5cb;
+    --color-on-secondary-fixed: #1b1b1f;
+    --color-on-secondary-fixed-variant: #47464b;
+
+    /* Tertiary slate blue — shifted lighter */
+    --color-tertiary: #afc7f4;
+    --color-on-tertiary: #163052;
+    --color-tertiary-container: #2f476d;
+    --color-on-tertiary-container: #d5e3ff;
+
+    /* Error */
+    --color-error: #ffb4ab;
+    --color-on-error: #690005;
+    --color-error-container: #93000a;
+    --color-on-error-container: #ffdad6;
+
+    /* Background */
+    --color-background: #111318;
+    --color-on-background: #e0e2e7;
+    --color-surface-variant: #44474c;
+
+    /* Semantic status — dark mode */
+    --color-success: #66bb6a;
+    --color-success-container: #1b5e20;
+    --color-warning: #ffb74d;
+    --color-warning-container: #7a4a00;
+    --color-info: #64b5f6;
+    --color-info-container: #0d47a1;
+  }
+
+  /* ============================================================
+     Base Styles
+     ============================================================ */
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    overflow: hidden;
+  }
+
+  /* Prevent text selection in drag regions */
+  .titlebar {
+    -webkit-app-region: drag;
+    user-select: none;
+  }
+
+  .titlebar button {
+    -webkit-app-region: no-drag;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-outline-variant);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-outline);
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: var(--color-tertiary);
+    color: var(--color-on-tertiary);
+  }
+}
+
+/* ============================================================
+   Component Classes — driven by CSS variables
+   ============================================================ */
+@layer components {
+  .btn-primary {
+    @apply font-medium py-2 px-4 rounded transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--color-on-secondary-fixed-variant);
+  }
+
+  .btn-secondary {
+    @apply font-medium py-2 px-4 rounded transition-colors duration-150;
+    background-color: var(--color-surface-container);
+    color: var(--color-on-surface);
+    border: 1px solid var(--color-outline-variant);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    background-color: var(--color-surface-container-high);
+  }
+
+  .btn-danger {
+    @apply font-medium py-2 px-4 rounded transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+    background-color: var(--color-error);
+    color: var(--color-on-error);
+  }
+  .btn-danger:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  .card {
+    background-color: var(--color-surface-container-lowest);
+    border: 1px solid var(--color-outline-variant);
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 text-sm rounded
+           placeholder:opacity-50 focus:outline-none;
+    background-color: var(--color-surface-container-low);
+    border: 1px solid var(--color-outline-variant);
+    color: var(--color-on-surface);
+  }
+  .input-field:focus {
+    border-color: var(--color-tertiary);
+    outline: none;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg
+           transition-colors duration-150;
+  }
+
+  .sidebar-link-active {
+    background-color: var(--color-surface-container);
+    color: var(--color-on-surface);
+    box-shadow: inset 2px 0 0 0 var(--color-secondary);
+  }
+
+  .sidebar-link-inactive {
+    color: var(--color-on-surface-variant);
+  }
+  .sidebar-link-inactive:hover {
+    background-color: var(--color-surface-container-low);
+    color: var(--color-on-surface);
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .data-table th {
+    background-color: var(--color-surface-container);
+    border-bottom: 1px solid var(--color-outline-variant);
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-on-surface-variant);
+  }
+  .data-table td {
+    border-bottom: 1px solid var(--color-outline-variant);
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--color-on-surface);
+  }
+  .data-table tr:hover td {
+    background-color: var(--color-surface-container-low);
+  }
+
+  /* Badge / Chip — muted semantic colors per DESIGN.md */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .badge-success {
+    background-color: var(--color-success-container);
+    color: var(--color-success);
+  }
+  .badge-warning {
+    background-color: var(--color-warning-container);
+    color: var(--color-warning);
+  }
+  .badge-error {
+    background-color: var(--color-error-container);
+    color: var(--color-error);
+  }
+  .badge-info {
+    background-color: var(--color-info-container);
+    color: var(--color-info);
+  }
+}

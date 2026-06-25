@@ -1,0 +1,127 @@
+{
+  "app": {
+    "name": "CleverBiz",
+    "tagline": "Smart POS & Business Operations Platform",
+    "version": "Version {{version}}"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signingIn": "Signing in...",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "owner@tokoku.com",
+    "passwordPlaceholder": "••••••••",
+    "errorRequired": "Email and password are required",
+    "errorFailed": "Login failed",
+    "signOut": "Sign Out"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "pos": "POS",
+    "products": "Products",
+    "inventory": "Inventory",
+    "employees": "Employees",
+    "transactions": "Transactions",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "collapse": "Collapse",
+    "expand": "Expand"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "todayRevenue": "Today's Revenue",
+    "monthlyRevenue": "Monthly Revenue",
+    "transactionsToday": "Transactions Today",
+    "lowStockItems": "Low Stock Items",
+    "recentTransactions": "Recent Transactions",
+    "noTransactions": "No transactions yet. Start selling from the POS.",
+    "businessHealth": "Business Health",
+    "businessHealthDesc": "Connect to the cloud backend to see your business health score.",
+    "offlineMode": "Offline mode"
+  },
+  "pos": {
+    "title": "Point of Sale",
+    "searchPlaceholder": "Search products by name or SKU...",
+    "scanHint": "Scan a barcode or search products",
+    "cart": "Cart",
+    "cartEmpty": "Cart is empty",
+    "total": "Total",
+    "payNow": "Pay Now",
+    "paymentMethod": "Payment Method",
+    "cash": "Cash",
+    "qris": "QRIS"
+  },
+  "products": {
+    "title": "Products",
+    "addProduct": "Add Product",
+    "cancel": "Cancel",
+    "newProduct": "New Product",
+    "productName": "Product name",
+    "sku": "SKU",
+    "price": "Price",
+    "initialStock": "Initial stock",
+    "category": "Category",
+    "saveProduct": "Save Product",
+    "noProducts": "No products yet. Add your first product to start selling."
+  },
+  "inventory": {
+    "title": "Inventory",
+    "stockIn": "Stock In",
+    "stockInDesc": "Record incoming stock here.",
+    "stockOut": "Stock Out",
+    "stockOutDesc": "Record outgoing stock here.",
+    "log": "Inventory Log",
+    "logDesc": "Stock movement history will appear here."
+  },
+  "employees": {
+    "title": "Employees & Payroll",
+    "description": "Employee management and payroll calculation will be available here. Add employees to track attendance and calculate monthly salaries."
+  },
+  "transactions": {
+    "title": "Transactions",
+    "description": "Transaction history will appear here."
+  },
+  "analytics": {
+    "title": "Analytics",
+    "digitalPresence": "Digital Presence",
+    "digitalPresenceDesc": "Google ratings and review tracking will appear here after connecting to the backend.",
+    "businessHealth": "Business Health",
+    "businessHealthDesc": "Business health score and credit grading will appear here."
+  },
+  "settings": {
+    "title": "Settings",
+    "storeProfile": "Store Profile",
+    "storeName": "Store Name",
+    "storeNamePlaceholder": "My Store",
+    "address": "Address",
+    "addressPlaceholder": "Store address",
+    "save": "Save",
+    "printerConfig": "Printer Configuration",
+    "printerConfigDesc": "Configure thermal printer for receipts.",
+    "language": "Language",
+    "languageLabel": "Display Language",
+    "theme": "Theme",
+    "themeLabel": "Theme Mode",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "about": "About",
+    "aboutDesc": "CleverBiz v1.0.0 — Clever Labs © 2026"
+  },
+  "role": {
+    "owner": "Owner",
+    "cashier": "Cashier"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "noData": "No data available",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter"
+  }
+}

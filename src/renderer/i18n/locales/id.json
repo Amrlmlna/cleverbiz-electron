@@ -1,0 +1,127 @@
+{
+  "app": {
+    "name": "CleverBiz",
+    "tagline": "Platform POS Pintar & Operasi Bisnis",
+    "version": "Versi {{version}}"
+  },
+  "auth": {
+    "signIn": "Masuk",
+    "signingIn": "Memasuki...",
+    "email": "Email",
+    "password": "Kata Sandi",
+    "emailPlaceholder": "pemilik@tokoku.com",
+    "passwordPlaceholder": "••••••••",
+    "errorRequired": "Email dan kata sandi wajib diisi",
+    "errorFailed": "Gagal masuk",
+    "signOut": "Keluar"
+  },
+  "nav": {
+    "dashboard": "Dasbor",
+    "pos": "POS",
+    "products": "Produk",
+    "inventory": "Inventaris",
+    "employees": "Karyawan",
+    "transactions": "Transaksi",
+    "analytics": "Analitik",
+    "settings": "Pengaturan",
+    "collapse": "Ciutkan",
+    "expand": "Perluas"
+  },
+  "dashboard": {
+    "title": "Dasbor",
+    "todayRevenue": "Pendapatan Hari Ini",
+    "monthlyRevenue": "Pendapatan Bulanan",
+    "transactionsToday": "Transaksi Hari Ini",
+    "lowStockItems": "Stok Menipis",
+    "recentTransactions": "Transaksi Terbaru",
+    "noTransactions": "Belum ada transaksi. Mulai berjualan dari POS.",
+    "businessHealth": "Kesehatan Bisnis",
+    "businessHealthDesc": "Hubungkan ke cloud untuk melihat skor kesehatan bisnis Anda.",
+    "offlineMode": "Mode offline"
+  },
+  "pos": {
+    "title": "Titik Penjualan",
+    "searchPlaceholder": "Cari produk berdasarkan nama atau SKU...",
+    "scanHint": "Pindai barcode atau cari produk",
+    "cart": "Keranjang",
+    "cartEmpty": "Keranjang kosong",
+    "total": "Total",
+    "payNow": "Bayar Sekarang",
+    "paymentMethod": "Metode Pembayaran",
+    "cash": "Tunai",
+    "qris": "QRIS"
+  },
+  "products": {
+    "title": "Produk",
+    "addProduct": "Tambah Produk",
+    "cancel": "Batal",
+    "newProduct": "Produk Baru",
+    "productName": "Nama produk",
+    "sku": "SKU",
+    "price": "Harga",
+    "initialStock": "Stok awal",
+    "category": "Kategori",
+    "saveProduct": "Simpan Produk",
+    "noProducts": "Belum ada produk. Tambahkan produk pertama Anda untuk mulai berjualan."
+  },
+  "inventory": {
+    "title": "Inventaris",
+    "stockIn": "Barang Masuk",
+    "stockInDesc": "Catat barang masuk di sini.",
+    "stockOut": "Barang Keluar",
+    "stockOutDesc": "Catat barang keluar di sini.",
+    "log": "Riwayat Inventaris",
+    "logDesc": "Riwayat pergerakan stok akan muncul di sini."
+  },
+  "employees": {
+    "title": "Karyawan & Penggajian",
+    "description": "Manajemen karyawan dan perhitungan penggajian akan tersedia di sini. Tambahkan karyawan untuk melacak kehadiran dan menghitung gaji bulanan."
+  },
+  "transactions": {
+    "title": "Transaksi",
+    "description": "Riwayat transaksi akan muncul di sini."
+  },
+  "analytics": {
+    "title": "Analitik",
+    "digitalPresence": "Kehadiran Digital",
+    "digitalPresenceDesc": "Rating Google dan ulasan akan muncul di sini setelah terhubung ke backend.",
+    "businessHealth": "Kesehatan Bisnis",
+    "businessHealthDesc": "Skor kesehatan bisnis dan grading kredit akan muncul di sini."
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "storeProfile": "Profil Toko",
+    "storeName": "Nama Toko",
+    "storeNamePlaceholder": "Toko Saya",
+    "address": "Alamat",
+    "addressPlaceholder": "Alamat toko",
+    "save": "Simpan",
+    "printerConfig": "Konfigurasi Printer",
+    "printerConfigDesc": "Konfigurasi printer thermal untuk struk.",
+    "language": "Bahasa",
+    "languageLabel": "Bahasa Tampilan",
+    "theme": "Tema",
+    "themeLabel": "Mode Tema",
+    "themeLight": "Terang",
+    "themeDark": "Gelap",
+    "themeSystem": "Sistem",
+    "about": "Tentang",
+    "aboutDesc": "CleverBiz v1.0.0 — Clever Labs © 2026"
+  },
+  "role": {
+    "owner": "Pemilik",
+    "cashier": "Kasir"
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba Lagi",
+    "noData": "Tidak ada data",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "edit": "Ubah",
+    "search": "Cari",
+    "filter": "Filter"
+  }
+}
